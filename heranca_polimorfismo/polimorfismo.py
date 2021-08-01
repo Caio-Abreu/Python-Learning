@@ -10,6 +10,9 @@ class Animal(object):
 
     def falar(self):
         raise NotImplementedError('A classe filha precisa implementar este metodo')
+    @property
+    def nome(self):
+        return self.__nome
 
     def comer(self):
         print(f'{self.__nome} esta comendo')
@@ -19,21 +22,21 @@ class Cachorro(Animal):
         super().__init__(nome)
 
     def falar(self):
-        return f'{self._Animal__nome} fala au au'
+        return f'{super().nome} fala au au'
 
 class Gato(Animal):
     def __init__(self, nome):
         super().__init__(nome)
     
     def falar(self):
-        return f'{self._Animal__nome} fala miau miau'
+        return f'{super().nome} fala miau miau'
 
 class Rato(Animal):
     def __init__(self, nome):
         super().__init__(nome)
 
     def falar(self):
-        print(f'{self._Animal__nome} fala algo')
+        print(f'{super().nome} fala algo')
 
 # Teste
 
