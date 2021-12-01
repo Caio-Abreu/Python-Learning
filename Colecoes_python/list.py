@@ -104,7 +104,7 @@ for elemento in numeros:
     soma += elemento
 print(soma)
 
-# Exemplo 2 utilizando white
+# Exemplo 2 utilizando while
 carrinho =[]
 produto =''
 
